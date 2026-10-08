@@ -1,0 +1,23 @@
+.page { padding: 36px; display: flex; flex-direction: column; gap: 24px; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+.title { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+.sub { font-size: 13px; color: var(--text3); margin-top: 4px; }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; }
+.filterBtn { display: flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 99px; border: 1px solid var(--border2); background: var(--surface); font-family: inherit; font-size: 12px; font-weight: 600; color: var(--text2); cursor: pointer; transition: all 0.15s; }
+.filterBtn:hover { border-color: var(--primary-light); color: var(--text); }
+.filterActive { background: rgba(124,58,237,0.15); border-color: var(--primary); color: var(--primary-light); }
+.filterCount { background: var(--surface3); color: var(--text3); padding: 1px 7px; border-radius: 99px; font-size: 11px; }
+.filterActive .filterCount { background: var(--primary); color: #fff; }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.taskCard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: all 0.2s; }
+.taskCard:hover { border-color: var(--border2); transform: translateX(3px); }
+.taskLeft { display: flex; align-items: flex-start; gap: 12px; flex: 1; min-width: 0; }
+.statusDot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.dot_todo { background: var(--todo-color); }
+.dot_in_progress { background: var(--progress-color); box-shadow: 0 0 6px rgba(245,158,11,0.4); }
+.dot_done { background: var(--done-color); }
+.taskTitle { font-size: 14px; font-weight: 600; }
+.taskDesc { font-size: 12px; color: var(--text3); margin-top: 3px; line-height: 1.5; }
+.taskRight { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.sprintTag { font-size: 11px; font-weight: 600; color: var(--primary-light); background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.2); padding: 2px 8px; border-radius: 99px; }
+.time { font-size: 12px; color: var(--text3); font-family: monospace; }

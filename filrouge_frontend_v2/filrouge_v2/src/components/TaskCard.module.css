@@ -1,0 +1,61 @@
+.card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 13px;
+  margin-bottom: 8px;
+  cursor: grab;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.card:hover {
+  border-color: var(--border2);
+  background: var(--surface3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.card:active { cursor: grabbing; }
+
+.top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
+
+.menuWrap { position: relative; }
+.menuBtn { opacity: 0; transition: opacity 0.15s; }
+.card:hover .menuBtn { opacity: 1; }
+
+.menu {
+  position: absolute; top: 100%; right: 0;
+  background: var(--surface3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  z-index: 100; min-width: 140px; overflow: hidden;
+}
+.menu button {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 9px 12px;
+  background: none; border: none;
+  font-family: inherit; font-size: 12px;
+  color: var(--text2); cursor: pointer; transition: all 0.1s;
+}
+.menu button:hover { background: var(--surface); color: var(--text); }
+.menuDel { color: #f87171 !important; }
+.menuDel:hover { background: rgba(239,68,68,0.1) !important; }
+
+.title { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 5px; }
+.desc { font-size: 12px; color: var(--text3); line-height: 1.5; margin-bottom: 9px; }
+
+.sprintTag {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 600;
+  color: var(--primary-light);
+  background: rgba(124,58,237,0.12);
+  border: 1px solid rgba(124,58,237,0.2);
+  padding: 2px 8px; border-radius: 99px;
+  margin-bottom: 9px;
+}
+
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+
+.assignee { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text2); font-weight: 500; }
+.unassigned { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--text3); }
+.time { display: flex; align-items: center; gap: 3px; font-size: 11px; color: var(--text3); font-family: monospace; }
